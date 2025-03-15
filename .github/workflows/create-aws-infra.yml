@@ -1,5 +1,5 @@
 name: create-infra
-on: [workflow-dispatch, push]
+on: [workflow_dispatch, push]
 
 jobs:
     create-key-pair:
