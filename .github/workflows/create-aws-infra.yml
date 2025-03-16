@@ -27,4 +27,4 @@ jobs:
             - name: print env var
               run:  echo $AWS_DEFAULT_REGION
             - name: output from previous step
-              run: echo ${{needs.create-infra.outputs.output1.value}}
+              run: echo ${{needs.create-infra.outputs.output1}}
