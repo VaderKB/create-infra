@@ -12,7 +12,7 @@ jobs:
         steps:
             - name : See output
               id : step1
-              run: echo "Hello there" 
+              run: echo "value=Hello there" >> "$GITHUB_OUTPUT"
             - name: Clone repo
               uses: actions/checkout@v4
             - name: print env var
@@ -28,4 +28,4 @@ jobs:
             - name: print env var
               run:  echo $AWS_DEFAULT_REGION
             - name: output from previous step
-              run: ${{needs.create-infra.outputs.output1}}
+              run: ${{needs.create-infra.outputs.output1.value}}
